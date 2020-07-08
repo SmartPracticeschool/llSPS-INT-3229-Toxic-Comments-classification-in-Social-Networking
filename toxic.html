@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<audio id="myAudio">
+  <source src="pop.ogg" type="audio/ogg">
+  <source src="pop.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<style>
+body {font-family: "Comic Sans MS", cursive, sans-serif;}
+
+input[type=text], input[type=password] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color:green;
+  color: white;
+  padding: 20px 20px;
+  margin: 10px 0;
+  border: 30px;
+  cursor:pointer;
+  width: 20%;
+  height:50px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 80%; 
+}
+
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color:white;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body align="center" style="background-image: url('bg2.jpg')">
+<p id="p1">.</p>
+<img src="c.png" alt="Trulli" width="230" height="230">
+<form>
+<label for="fname" ><strong style="color:white;" class="w3-xxlarge">ENTER COMMENT:</strong></label><br>
+<input id="tb" type="text" size="20"><br>
+</form>
+<p id="p1">.</p>
+<button type="button" onclick="document.getElementById('id01').style.display='block';win();move();playAudio();"  class="w3-btn w3-container w3-green w3-border w3-border-white w3-round-xlarge" >Submit</button>
+<p id="p1">.</p>
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post" style="background-image: url('bg.jpeg');">
+    <div class="imgcontainer" >
+     <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal" >&times;</span>
+      
+<div class="w3-container ">
+    <div id="myBar" class=" w3-round" align="left">
+    <p style="color:white;" class="w3-large"><strong>TOXIC:</strong></p>
+    
+    <div id="tox" class="w3-container w3-aqua  w3-panel w3-win8-teal w3-round" style="width:25%; color:#00FFFF">25%</div>
+    
+    <img src="st.gif" alt="Trulli" width="100" height="100">
+    <p style="color:white;" class="w3-large"><strong>SEVERE TOXIC:</strong></p>
+    <div class=" w3-round">
+    
+    <div id="st"class="w3-container w3-aqua  w3-panel w3-win8-teal w3-round" style="width:30%;">30%</div>
+    
+    <img src="toxic.gif" alt="Trulli" width="80" height="80">
+    <p style="color:white;" class="w3-large"><strong>OBSCENE:</strong></p>
+    <div class=" w3-round">
+    
+    <div id="ob" class="w3-container  w3-aqua w3-panel w3-win8-teal w3-round" style="width:50%;">50%</div>
+    
+    <img src="ob.gif" alt="Trulli" width="80" height="80">
+    <p style="color:white;" class="w3-large"><strong>THREAT:</strong></p>
+    <div class="w3-round">
+    <div id="thd" class="w3-container w3-aqua w3-panel w3-win8-teal w3-round" style="width:90%;">90%</div>
+    <img src="thd.gif" alt="Trulli" width="80" height="80">
+    <p style="color:white;" class="w3-large"><strong>INSULTS:</strong></p>
+    <div class=" w3-round">
+    <div id="in" class="w3-container w3-aqua w3-panel w3-win8-teal w3-round" style="width:26%;">26%</div>
+    <img src="insult.gif" alt="Trulli" width="80" height="80">
+    <p style="color:white;" class="w3-large"><strong>IDENTITY HATE:</strong></p>
+    <div class="w3-round">
+    <div id="hate" class="w3-container w3-aqua w3-panel w3-win8-teal w3-round" style="width:20%;">20%</div>
+     <img src="id.gif" alt="Trulli" width="80" height="80">
+  </div><br>
+
+</div>
+</div>
+<script>
+ function win(event) {
+    var modal = document.getElementById('id01');
+    document.getElementById("p1").innerHTML="";
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+function move() {
+    document.getElementById("p1").innerHTML="";
+  var elem = document.getElementById("myBar");
+  var width = 1;
+  var id = setInterval(frame,15);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++;
+      elem.style.width = width + '%';
+    }
+  }
+}
+var x = document.getElementById("myAudio"); 
+function playAudio() {
+  x.play();  
+} 
+</script>
+</body>
+</html>
